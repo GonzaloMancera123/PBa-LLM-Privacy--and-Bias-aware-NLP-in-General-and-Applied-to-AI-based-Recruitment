@@ -20,7 +20,7 @@ The advancement of Large Language Models (LLMs) has enabled powerful NLP applica
 We evaluate **eight anonymization models** (specialized NER systems and general-purpose LLMs) across **six text classification datasets**, and apply the framework to a **bias-aware CV screening case study** on FairCVdb, showing that privacy-preserving preprocessing can be integrated into real-world recruitment pipelines without degrading task performance.
 
 <p align="center">
-  <img src="assets/fig1_graphical_abstract.png" width="600">
+  <img src="assets/fig1_graphical_abstract1.png" width="600">
   <br>
   <em>Fig. 1 — Graphical abstract: models are trained on original text (𝒟) and on NER-anonymized text (𝒟⁻) to compare performance.</em>
 </p>
