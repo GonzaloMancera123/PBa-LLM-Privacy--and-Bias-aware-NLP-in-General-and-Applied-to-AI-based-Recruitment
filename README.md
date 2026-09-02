@@ -57,18 +57,20 @@ Aquí tienes el resto del README, continuando justo después de la sección de "
 markdown
 ## 📁 Repository Structure
 
+```
 pba-llm/
-├── data/ # Dataset loading & preprocessing scripts
-├── anonymization/ # NER-based anonymization pipeline
-│ ├── models/ # Presidio, Flair, Stanza, NER-CoNLL2003-BERT wrappers
-│ └── prompts/ # Prompt templates for GPT-3.5, GPT-4 Mini/Nano, DeepSeek-V3
-├── training/ # BERT classifier training scripts (Section 4 experiments)
-├── recruitment_case_study/ # FairCVdb occupancy & scoring experiments (Section 5)
-├── configs/ # Hyperparameters, model versions, decoding settings
-├── results/ # Output tables and figures
-├── assets/ # Figures used in this README
+├── data/                      # Dataset loading & preprocessing scripts
+├── anonymization/              # NER-based anonymization pipeline
+│   ├── models/                 # Presidio, Flair, Stanza, NER-CoNLL2003-BERT wrappers
+│   └── prompts/                 # Prompt templates for GPT-3.5, GPT-4 Mini/Nano, DeepSeek-V3
+├── training/                   # BERT classifier training scripts (Section 4 experiments)
+├── recruitment_case_study/     # FairCVdb occupancy & scoring experiments (Section 5)
+├── configs/                    # Hyperparameters, model versions, decoding settings
+├── results/                    # Output tables and figures
+├── assets/                     # Figures used in this README
 ├── requirements.txt
 └── README.md
+```
 
 
 ## ⚙️ Installation
