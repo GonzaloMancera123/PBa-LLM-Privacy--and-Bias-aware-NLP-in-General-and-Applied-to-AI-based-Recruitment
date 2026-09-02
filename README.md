@@ -52,6 +52,8 @@ To demonstrate the practical value of the framework, PBa-LLM is applied to an AI
   <em>Fig. 3 — Recruitment case study: candidate resumes are anonymized before occupancy prediction and scoring, reducing reliance on personal and demographic information.</em>
 </p>
 
+> **Dataset:** This case study uses **FairCVdb**, developed by our research group (BiDAlab) as a testbed for studying fairness and bias in multimodal automatic recruitment systems. The dataset and its accompanying benchmark are publicly available at [BiDAlab/FairCVtest](https://github.com/BiDAlab/FairCVtest), together with additional resources on multimodal bias analysis in AI-based hiring.
+
 ## 📁 Repository Structure
 
 ```
