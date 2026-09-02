@@ -92,9 +92,6 @@ pba-llm/
 │   ├── bert_gender_classification.py
 │   └── bert_score_pred.py
 │
-├── data/
-├── configs/
-│   └── prompts/
 ├── assets/
 ├── requirements.txt
 ├── .gitignore
