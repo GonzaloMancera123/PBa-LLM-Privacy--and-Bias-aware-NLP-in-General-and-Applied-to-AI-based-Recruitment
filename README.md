@@ -59,17 +59,33 @@ markdown
 
 ```
 pba-llm/
-├── data/                      # Dataset loading & preprocessing scripts
-├── anonymization/              # NER-based anonymization pipeline
-│   ├── models/                 # Presidio, Flair, Stanza, NER-CoNLL2003-BERT wrappers
-│   └── prompts/                 # Prompt templates for GPT-3.5, GPT-4 Mini/Nano, DeepSeek-V3
-├── training/                   # BERT classifier training scripts (Section 4 experiments)
-├── recruitment_case_study/     # FairCVdb occupancy & scoring experiments (Section 5)
-├── configs/                    # Hyperparameters, model versions, decoding settings
-├── results/                    # Output tables and figures
-├── assets/                     # Figures used in this README
+├── text_privacy_impact/                  # Section 4: Table 1 experiments (6 datasets)
+│   ├── anonymization/
+│   │   ├── anonymize_presidio.py
+│   │   ├── anonymize_flair.py
+│   │   ├── anonymize_stanza.py
+│   │   ├── anonymize_ner_conll2003_bert.py
+│   │   ├── anonymize_gpt35.py
+│   │   ├── anonymize_gpt4_mini.py
+│   │   ├── anonymize_gpt4_nano.py
+│   │   └── anonymize_deepseek.py
+│   └── classification/
+│       └── train_classifier.py
+│
+├── recruitment_case_study/                # Section 5: FairCVdb experiments
+│   ├── anonymization/
+│   ├── occupancy_prediction/
+│   └── scoring_prediction/
+│
+├── data/
+├── configs/
+│   └── prompts/
+├── assets/
 ├── requirements.txt
+├── .gitignore
+├── LICENSE
 └── README.md
+
 ```
 
 
