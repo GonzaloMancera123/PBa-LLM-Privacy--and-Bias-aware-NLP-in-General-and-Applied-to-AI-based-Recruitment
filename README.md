@@ -73,28 +73,15 @@ pba-llm/
 
 ## ⚙️ Installation
 
-```bash
-git clone https://github.com/<tu-usuario>/pba-llm.git
-cd pba-llm
-pip install -r requirements.txt
-```
+
 
 ## 🚀 Usage
 
-```bash
-# Run anonymization on a given dataset with a chosen NER/LLM model
-python anonymization/run_anonymization.py --dataset dbpedia --model flair
 
-# Train the downstream BERT classifier on anonymized/non-anonymized data
-python training/train_classifier.py --dataset dbpedia --anonymized true
-
-# Run the FairCVdb recruitment case study
-python recruitment_case_study/run_case_study.py --transformer roberta --anonymizer gpt-4
-```
 
 ## 🔬 Reproducibility
 
-Details on model versions, prompt templates, decoding parameters (temperature, top-p), and training hyperparameters (seeds, optimizer settings, number of runs) used in the paper are documented in [`configs/`](configs/).
+
 
 ## 📚 Citation
 
