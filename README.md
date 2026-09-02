@@ -52,4 +52,80 @@ To demonstrate the practical value of the framework, PBa-LLM is applied to an AI
   <em>Fig. 3 — Recruitment case study: candidate resumes are anonymized before occupancy prediction and scoring, reducing reliance on personal and demographic information.</em>
 </p>
 
+Aquí tienes el resto del README, continuando justo después de la sección de "Case Study" que ya tienes:
+
+markdown
 ## 📁 Repository Structure
+
+pba-llm/
+├── data/ # Dataset loading & preprocessing scripts
+├── anonymization/ # NER-based anonymization pipeline
+│ ├── models/ # Presidio, Flair, Stanza, NER-CoNLL2003-BERT wrappers
+│ └── prompts/ # Prompt templates for GPT-3.5, GPT-4 Mini/Nano, DeepSeek-V3
+├── training/ # BERT classifier training scripts (Section 4 experiments)
+├── recruitment_case_study/ # FairCVdb occupancy & scoring experiments (Section 5)
+├── configs/ # Hyperparameters, model versions, decoding settings
+├── results/ # Output tables and figures
+├── assets/ # Figures used in this README
+├── requirements.txt
+└── README.md
+
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/<tu-usuario>/pba-llm.git
+cd pba-llm
+pip install -r requirements.txt
+```
+
+## 🚀 Usage
+
+```bash
+# Run anonymization on a given dataset with a chosen NER/LLM model
+python anonymization/run_anonymization.py --dataset dbpedia --model flair
+
+# Train the downstream BERT classifier on anonymized/non-anonymized data
+python training/train_classifier.py --dataset dbpedia --anonymized true
+
+# Run the FairCVdb recruitment case study
+python recruitment_case_study/run_case_study.py --transformer roberta --anonymizer gpt-4
+```
+
+## 🔬 Reproducibility
+
+Details on model versions, prompt templates, decoding parameters (temperature, top-p), and training hyperparameters (seeds, optimizer settings, number of runs) used in the paper are documented in [`configs/`](configs/).
+
+## 📚 Citation
+
+If you use this code or find our work useful, please cite:
+
+```bibtex
+@article{mancera2026pballm,
+  title   = {PBa-LLM: Privacy- and Bias-aware NLP in General and Applied to AI-based Recruitment},
+  author  = {Mancera, Gonzalo and DeAlcala, Daniel and Fierrez, Julian and Tolosana, Ruben and Jurado, Francisco and Ortigosa, Alvaro and Morales, Aythami},
+  journal = {Machine Intelligence Research},
+  year    = {2026}
+}
+```
+
+This work builds on a preliminary version presented at ICDAR 2025:
+
+```bibtex
+@inproceedings{mancera2025pballm,
+  title     = {PBa-LLM: Privacy- and Bias-aware NLP Using Named-Entity Recognition (NER)},
+  author    = {Mancera, Gonzalo and Morales, Aythami and Fierrez, Julian and Tolosana, Ruben and Pe{\~n}a, Alejandro and Lopez-Duran, Miguel and Jurado, Francisco and Ortigosa, Alvaro},
+  booktitle = {International Conference on Document Analysis and Recognition},
+  pages     = {3--20},
+  year      = {2025},
+  organization = {Springer}
+}
+```
+
+## 🙏 Acknowledgments
+
+This study has been supported by the projects M2RAI (PID2024-160053OB-I00, MICIU/FEDER) and Cátedra ENIA UAM-VERIDAS en IA Responsable (NextGenerationEU PRTR TSI-100927-2023-2). The work of G. Mancera is supported by FPI-PRE2022-104499 MICINN/FEDER. This work has been conducted within the ELLIS Unit Madrid.
+
+## 📬 Contact
+
+For questions about this work, please contact **gonzalo.mancera@uam.es** or open an issue in this repository.
