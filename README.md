@@ -98,27 +98,16 @@ Details on model versions, prompt templates, decoding parameters (temperature, t
 
 ## 📚 Citation
 
-If you use this code or find our work useful, please cite:
-
-```bibtex
-@article{mancera2026pballm,
-  title   = {PBa-LLM: Privacy- and Bias-aware NLP in General and Applied to AI-based Recruitment},
-  author  = {Mancera, Gonzalo and DeAlcala, Daniel and Fierrez, Julian and Tolosana, Ruben and Jurado, Francisco and Ortigosa, Alvaro and Morales, Aythami},
-  journal = {Machine Intelligence Research},
-  year    = {2026}
-}
-```
-
 This work builds on a preliminary version presented at ICDAR 2025:
 
 ```bibtex
-@inproceedings{mancera2025pballm,
-  title     = {PBa-LLM: Privacy- and Bias-aware NLP Using Named-Entity Recognition (NER)},
-  author    = {Mancera, Gonzalo and Morales, Aythami and Fierrez, Julian and Tolosana, Ruben and Pe{\~n}a, Alejandro and Lopez-Duran, Miguel and Jurado, Francisco and Ortigosa, Alvaro},
-  booktitle = {International Conference on Document Analysis and Recognition},
-  pages     = {3--20},
-  year      = {2025},
-  organization = {Springer}
+@inproceedings{mancera2025pba,
+  title={PBa-LLM: Privacy-and bias-aware NLP using named-entity recognition (NER)},
+  author={Mancera, Gonzalo and Morales, Aythami and Fierrez, Julian and Tolosana, Ruben and Pe{\~n}a, Alejandro and Lopez-Duran, Miguel and Jurado, Francisco and Ortigosa, Alvaro},
+  booktitle={International Conference on Document Analysis and Recognition},
+  pages={3--20},
+  year={2025},
+  organization={Springer}
 }
 ```
 
