@@ -52,9 +52,6 @@ To demonstrate the practical value of the framework, PBa-LLM is applied to an AI
   <em>Fig. 3 — Recruitment case study: candidate resumes are anonymized before occupancy prediction and scoring, reducing reliance on personal and demographic information.</em>
 </p>
 
-Aquí tienes el resto del README, continuando justo después de la sección de "Case Study" que ya tienes:
-
-markdown
 ## 📁 Repository Structure
 
 ```
