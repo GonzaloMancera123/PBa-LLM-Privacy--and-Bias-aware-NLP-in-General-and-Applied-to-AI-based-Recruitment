@@ -34,6 +34,8 @@ We evaluate **eight anonymization models** (specialized NER systems and general-
 
 ## 🏗️ Framework
 
+The core of PBa-LLM is a modular, model-agnostic pipeline in which an anonymization module (N) and a downstream language model (M) are fully interchangeable components. Raw text is first tokenized and passed through the NER anonymizer, which detects and masks Person, Location, and Organization entities, producing an anonymized version of the text. Both the original and anonymized text are then independently used to train a BERT-based classifier, allowing a direct comparison of downstream performance under the two conditions.
+
 <p align="center">
   <img src="assets/fig2_framework.png" width="700">
   <br>
@@ -41,6 +43,8 @@ We evaluate **eight anonymization models** (specialized NER systems and general-
 </p>
 
 ## 💼 Case Study: Blind Recruitment
+
+To demonstrate the practical value of the framework, PBa-LLM is applied to an AI-based recruitment scenario using the FairCVdb dataset. Candidate resumes are anonymized before being processed by the scoring system, removing personally identifiable information such as names and locations. This is combined with a gender-neutral preprocessing step that removes explicit and implicit gender indicators from free-text biographies, aiming to reduce the model's reliance on demographic proxies and produce more balanced candidate rankings.
 
 <p align="center">
   <img src="assets/fig3_recruitment_case_study.png" width="700">
