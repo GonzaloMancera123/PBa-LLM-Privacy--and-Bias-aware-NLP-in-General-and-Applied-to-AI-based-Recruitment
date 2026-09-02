@@ -103,13 +103,21 @@ pba-llm/
 
 ## ⚙️ Installation
 
+Clone the repository and install the required dependencies:
 
+```bash
+git clone https://github.com/<tu-usuario>/pba-llm.git
+cd pba-llm
+pip install -r requirements.txt
+```
 
-## 🚀 Usage
+We recommend using a virtual environment (e.g., `venv` or `conda`) to avoid dependency conflicts:
 
-
-
-## 🔬 Reproducibility
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
 
 
 
