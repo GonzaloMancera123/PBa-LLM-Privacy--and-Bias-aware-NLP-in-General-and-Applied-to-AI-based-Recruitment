@@ -69,16 +69,28 @@ pba-llm/
 │   │   ├── anonymize_gpt4_nano.py
 │   │   └── anonymize_deepseek.py
 │   └── classification/
-│       └── cyber_classifier.py
+        └── cyber_classifier.py
         └── dbpedia_classifier.py
         └── imdb_classifier.py
         └── news_classifier.py
         └── twitter_classifier.py
 │
 ├── recruitment_case_study/                # Section 5: FairCVdb experiments
-│   ├── anonymization/
-│   ├── occupancy_prediction/
-│   └── scoring_prediction/
+│   ├── Anonymization/
+        └── ChatGPT
+            └── ChatGPTAnonimizarionCV.py
+        └── DeepPavlov
+            └── ChatGPTAnonimizarionCV.py
+        └── Flair
+            └── FlairAnonimizarionCV.py
+        └── Presidio
+            └── PresidioAnonimizationCV.py
+        └── Stanza
+            └── StanzaAnonimizationCV.py
+        └── DeepSeek
+            └── StanzaAnonimizationCVDeepseek.py
+│   ├── bert_gender_classification.py
+│   └── bert_score_pred.py
 │
 ├── data/
 ├── configs/
