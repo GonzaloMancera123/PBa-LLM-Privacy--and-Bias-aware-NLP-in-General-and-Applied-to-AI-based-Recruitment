@@ -135,7 +135,53 @@ This work builds on a preliminary version presented at ICDAR 2025:
   organization={Springer}
 }
 ```
+## 🚀 Usage
 
+### 1. Text Privacy Impact experiments (Section 4 — 6 classification datasets)
+
+```bash
+# Step 1: anonymize the dataset with the desired anonymizer
+python text_privacy_impact/anonymization/anonymize_presidio.py
+# (or anonymize_flair.py, anonymize_stanza.py, anonymize_ner_conll2003_bert.py,
+#  anonymize_gpt35.py, anonymize_gpt4_mini.py, anonymize_gpt4_nano.py, anonymize_deepseek.py)
+
+# Step 2: train and evaluate the downstream classifier for the target dataset
+python text_privacy_impact/classification/twitter_classifier.py     # Sentiment140
+python text_privacy_impact/classification/dbpedia_classifier.py     # DBPedia
+python text_privacy_impact/classification/news_classifier.py        # BBC News / News Category
+python text_privacy_impact/classification/imdb_classifier.py        # IMDB
+python text_privacy_impact/classification/cyber_classifier.py       # Cyberbullying Classification
+```
+
+### 2. Recruitment case study (Section 5 — FairCVdb)
+
+```bash
+# Step 1: anonymize FairCVdb biographies with the desired tool
+python recruitment_case_study/Anonymization/Presidio/PresidioAnonimizationCV.py
+# (or Flair/FlairAnonimizarionCV.py, Stanza/StanzaAnonimizationCV.py,
+#  ChatGPT/ChatGPTAnonimizarionCV.py, DeepPavlov/..., DeepSeek/...)
+
+# Step 2: train the resume-scoring model
+python recruitment_case_study/bert_score_pred.py
+
+# Step 3: analyze fairness metrics (Equal Opportunity Gap, Demographic
+# Parity Ratio) on the trained model
+python recruitment_case_study/analyze_model.py
+
+# Optional: gender-bias sector classification analysis
+python recruitment_case_study/bert_sector_classification.py
+```
+
+### 3. Membership Inference Attack (MIA) — separate pipeline
+
+```bash
+# Step 1: train the target model, if not already trained
+python recruitment_case_study/bert_score_pred.py     # anonymized configurations
+
+# Step 2: run the MIA attack
+python mia/miaopA.py    # Option A: clean scenario (train/test both anonymized)
+python mia/miaopB.py    # Option B: real-world attacker scenario (train/test both raw)
+```
 ## 🙏 Acknowledgments
 
 This study has been supported by the projects M2RAI (PID2024-160053OB-I00, MICIU/FEDER) and Cátedra ENIA UAM-VERIDAS en IA Responsable (NextGenerationEU PRTR TSI-100927-2023-2). The work of G. Mancera is supported by FPI-PRE2022-104499 MICINN/FEDER. This work has been conducted within the ELLIS Unit Madrid.
