@@ -119,22 +119,6 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-
-
-## 📚 Citation
-
-This work builds on a preliminary version presented at ICDAR 2025:
-
-```bibtex
-@inproceedings{mancera2025pba,
-  title={PBa-LLM: Privacy-and bias-aware NLP using named-entity recognition (NER)},
-  author={Mancera, Gonzalo and Morales, Aythami and Fierrez, Julian and Tolosana, Ruben and Pe{\~n}a, Alejandro and Lopez-Duran, Miguel and Jurado, Francisco and Ortigosa, Alvaro},
-  booktitle={International Conference on Document Analysis and Recognition},
-  pages={3--20},
-  year={2025},
-  organization={Springer}
-}
-```
 ## 🚀 Usage
 
 ### 1. Text Privacy Impact experiments (Section 4 — 6 classification datasets)
@@ -182,6 +166,22 @@ python recruitment_case_study/bert_score_pred.py     # anonymized configurations
 python mia/miaopA.py    # Option A: clean scenario (train/test both anonymized)
 python mia/miaopB.py    # Option B: real-world attacker scenario (train/test both raw)
 ```
+
+## 📚 Citation
+
+This work builds on a preliminary version presented at ICDAR 2025:
+
+```bibtex
+@inproceedings{mancera2025pba,
+  title={PBa-LLM: Privacy-and bias-aware NLP using named-entity recognition (NER)},
+  author={Mancera, Gonzalo and Morales, Aythami and Fierrez, Julian and Tolosana, Ruben and Pe{\~n}a, Alejandro and Lopez-Duran, Miguel and Jurado, Francisco and Ortigosa, Alvaro},
+  booktitle={International Conference on Document Analysis and Recognition},
+  pages={3--20},
+  year={2025},
+  organization={Springer}
+}
+```
+
 ## 🙏 Acknowledgments
 
 This study has been supported by the projects M2RAI (PID2024-160053OB-I00, MICIU/FEDER) and Cátedra ENIA UAM-VERIDAS en IA Responsable (NextGenerationEU PRTR TSI-100927-2023-2). The work of G. Mancera is supported by FPI-PRE2022-104499 MICINN/FEDER. This work has been conducted within the ELLIS Unit Madrid.
